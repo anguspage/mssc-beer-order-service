@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: guru.sfg.beer.order.service.BeerOrderServiceApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 3.671 s <<< FAILURE! - in guru.sfg.beer.order.service.BeerOrderServiceApplicationTests
+contextLoads  Time elapsed: 0.006 s  <<< ERROR!
+java.lang.NoClassDefFoundError: Could not initialize class org.codehaus.groovy.reflection.ReflectionCache
+
