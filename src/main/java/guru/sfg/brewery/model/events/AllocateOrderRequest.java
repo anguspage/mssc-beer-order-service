@@ -14,7 +14,5 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 public class AllocateOrderRequest {
-
     private BeerOrderDto beerOrder;
-
 }
