@@ -20,17 +20,19 @@ import org.springframework.stereotype.Component;
 public class BeerOrderValidationListener {
     private final JmsTemplate jmsTemplate;
 
-    @JmsListener(destination = JmsConfig.VALIDATE_ORDER_RESPONSE_QUEUE)
-    public void list(Message msg) {
+    @JmsListener(destination = JmsConfig.VALIDATE_ORDER_QUEUE)
+    public void list(Message msg){
 
         ValidateOrderRequest request = (ValidateOrderRequest) msg.getPayload();
 
-        System.out.println("######### I RAN ############");
+        System.out.println("########### I RAN ########");
 
         jmsTemplate.convertAndSend(JmsConfig.VALIDATE_ORDER_RESPONSE_QUEUE,
                 ValidateOrderResult.builder()
                         .isValid(true)
                         .orderId(request.getBeerOrder().getId())
-                        .build()) ;
+                        .build());
+
     }
 }
+
